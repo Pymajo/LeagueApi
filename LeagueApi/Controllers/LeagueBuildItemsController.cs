@@ -19,16 +19,12 @@ namespace LeagueApi.Controllers
         {
             _context = context;
         }
-
-        // GET: api/leagueBuildItems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BuildItem>>> GetLeagueBuildItem()
         {
             return Ok(await _context.BuildItems.ToListAsync());
 
         }
-
-        // GET: api/leagueBuildItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<BuildItem>> GetLeagueBuildItem(long id)
         {
@@ -41,10 +37,6 @@ namespace LeagueApi.Controllers
 
             return leagueBuildItem;
         }
-
-        // PUT: api/LeagueBuildItems/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLeagueBuildItem(int id, BuildItem leagueBuildItem)
         {
@@ -73,10 +65,6 @@ namespace LeagueApi.Controllers
 
             return NoContent();
         }
-
-        // POST: api/leagueBuildItems
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<BuildItem>> PostLeagueBuildItem(BuildItem leagueBuildItem)
         {

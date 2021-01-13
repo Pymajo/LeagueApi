@@ -10,6 +10,6 @@ namespace LeagueApi.Models
         public int Id { get; set; }
         public int BuildId { get; set; }
         public int ItemId { get; set; }
-
+        public string Image { get; set; }
     }
 }
